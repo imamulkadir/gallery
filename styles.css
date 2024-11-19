@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #333;
+}
+
+header {
+  background-color: #333;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd; /* Optional: border for separation */
+}
+
+.page-title {
+  margin: 0;
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Rampart One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+  width: auto;
+  height: 25px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Adjusted for 6 images per row */
+  gap: 10px;
+  max-width: 100%; /* Ensure it doesn't exceed the page width */
+  margin: 20px auto; /* Center the container */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px; /* Fixed height for consistent size */
+  object-fit: cover; /* Ensure consistent size without distortion */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.image-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  pointer-events: none; /* Prevent interfering with clicks on the image */
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+}
+
+#closeButton {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
